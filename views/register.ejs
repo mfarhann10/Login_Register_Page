@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<%- include('partials/header.ejs') %>
+
+<body class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div class="max-w-md w-full space-y-8">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-gray-900">Register</h1>
+            <p class="mt-2 text-sm text-gray-600">Create an account to get started</p>
+        </div>
+
+        <div class="bg-white p-8 shadow-lg rounded-lg">
+            <!-- Form Register -->
+            <form action="/register" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" name="name" id="name" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your Name">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="username" id="email" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your Email">
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" id="password" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your Password">
+                </div>
+
+                <button type="submit" class="w-full py-2 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300">Register</button>
+
+                        <!-- Google Sign Up Button -->
+        <div class="text-center">
+            <p class="text-gray-500">Or</p>
+            <div class="mt-2">
+                <a href="/auth/google" class="inline-flex items-center w-full py-3 px-4 bg-red-600 text-white font-medium rounded-md shadow-lg hover:bg-red-700 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 48 48">
+                        <path fill="#4285F4" d="M47.5 24.5c0-1.7-.2-3.3-.5-4.9H24v9.3h13.1c-.6 3-2.4 5.5-5 7.2v6h8.2c4.7-4.4 7.2-10.9 7.2-17.6z" />
+                        <path fill="#34A853" d="M24 48c6.5 0 12-2.2 16.1-6l-8.2-6c-2.2 1.5-5 2.4-7.9 2.4-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.7 43.6 14.7 48 24 48z" />
+                        <path fill="#FBBC05" d="M10.8 28.7c-1.5-4.6-1.5-9.6 0-14.2V8.3H2.6C-.9 14.4-.9 22.6 2.6 28.7l8.2-6.2z" />
+                        <path fill="#EA4335" d="M24 9.5c3.2-.1 6.2 1.2 8.4 3.4l6.2-6.2C33.7 2.2 29-0.1 24 0 14.7 0 6.7 4.4 2.6 11.3l8.2 6.2c1.9-5.6 7.1-9.7 13.2-9.7z" />
+                    </svg>
+                    Sign Up with Google
+                </a>
+            </div>
+        </div>
+            </form>
+        </div>
+
+
+        <!-- Login Link -->
+        <p class="mt-6 text-center text-sm text-gray-600">
+            Already have an account? 
+            <a href="/login" class="text-indigo-600 hover:text-indigo-500 font-medium">Login here</a>
+        </p>
+    </div>
+</body>
+
+</html>
